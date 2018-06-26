@@ -59,13 +59,13 @@ var Str9 = JSON.stringify(returnObj9);
 
 
 function ListItem(props) {
-  return <li>{props.value}</li>;
+  return <li className="list-group-item">{props.value}</li>;
 }
 
 function NumberList(props) {
   const numbers = props.numbers;
   return (
-    <ul>
+    <ul className="list-group">
       {numbers.map((number) =>
         <ListItem key={number.toString()}
                   value={number} />

@@ -11,6 +11,10 @@ class Navigation extends React.Component {
 		return(
 			<BrowserRouter history={history}>
 				<div>
+					<ul className="in-cont">
+						<li className="inline"><Link to="/">Home</Link></li>
+						<li className="inline"><Link to="/admin">Admin</Link></li>
+					</ul>
 					<Route exact path="/" component={Home}/>
 					<Route path="/admin" component={Admin}/>
 				</div>
