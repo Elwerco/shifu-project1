@@ -2,23 +2,17 @@ import React from 'react';
 import {BrowserRouter, Route, Link} from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
 import ReactDOM from "react-dom";
-import Home from "./components/Home";
-import Admin from "./components/Admin"
 import AdminAdd from "./components/AdminAdd"
-import { Router } from 'react-router-dom';
 const history = createBrowserHistory();	
 
-class Navigation extends React.Component {
+class RouteSecond extends React.Component {
 	render() {
 		return(
 			<BrowserRouter history={history}>
 				<div>
-					<ul className="in-cont">
-						<li className="inline"><Link to="/">Home</Link></li>
-						<li className="inline"><Link to="/admin">Admin</Link></li>
+					<ul className="in-cont1">
+						<li className="inline1"><Link to="/admin/add">Admin Add</Link></li>
 					</ul>
-					<Route exact path="/" component={Home}/>
-					<Route exact path="/admin" component={Admin}/>
 					<Route path="/admin/add" component={AdminAdd}/>
 				</div>
 			</BrowserRouter>
@@ -26,6 +20,4 @@ class Navigation extends React.Component {
 	}
 }
 
-
-
-export default Navigation;
+export default RouteSeconnd;

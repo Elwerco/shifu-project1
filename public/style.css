@@ -19,7 +19,7 @@ li.inline{
 	padding-left: 5px;
 }
 li.inline a {
-	color: #eee;
+	color: #333;
 }
 .list-group-item{
 	padding: 5px;
@@ -29,6 +29,16 @@ li.inline a {
 .in-cont{
 	display: flex;
 	justify-content: space-around;
-	background-color: #212529;
+	background-color: #f8f9fa;
 	border-radius: 3px;
+}
+.btn-key{
+	margin-bottom: 17px;
+}
+.color-light a{
+	color: #fff;
+	text-decoration: none;
+}
+.btnlol{
+	margin-bottom: -50px;
 }

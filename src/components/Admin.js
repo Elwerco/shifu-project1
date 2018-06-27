@@ -1,8 +1,8 @@
 import React from 'react';
-import {BrowserRouter, Route, Link} from 'react-router-dom';
+import  {Link} from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
-import ReactDOM from "react-dom";
-const history = createBrowserHistory();
+// import ReactDOM from "react-dom";
+// const history = createBrowserHistory();
 
 
 var event = {
@@ -56,8 +56,6 @@ var Str7 = JSON.stringify(returnObj7);
 var Str8 = JSON.stringify(returnObj8);
 var Str9 = JSON.stringify(returnObj9);
 
-
-
 function ListItem(props) {
   return <li className="list-group-item">{props.value}</li>;
 }
@@ -65,12 +63,15 @@ function ListItem(props) {
 function NumberList(props) {
   const numbers = props.numbers;
   return (
-    <ul className="list-group">
-      {numbers.map((number) =>
-        <ListItem key={number.toString()}
-                  value={number} />
-      )}
-    </ul>
+  	<div>
+		<button className="btn btn-primary btn-key color-light"><Link to="/admin/add">Добавление элемента</Link></button>
+	    <ul className="list-group">
+	      {numbers.map((number) =>
+	        <ListItem key={number.toString()}
+	                  value={number} />
+	      )}
+   		</ul>
+    </div>
   );
 }
 
@@ -78,8 +79,7 @@ const numbers = [Str, Str1, Str2, Str3, Str4, Str5, Str6, Str7, Str8, Str9];
 
 
 const Admin = () => (
-	<NumberList numbers={numbers}/>
+	<NumberList numbers={numbers}></NumberList>
 )
-
 
 export default Admin;
