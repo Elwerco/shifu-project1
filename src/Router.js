@@ -1,11 +1,10 @@
 import React from 'react';
 import {BrowserRouter, Route, Link} from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
-import ReactDOM from "react-dom";
 import Home from "./components/Home";
-import Admin from "./components/Admin"
-import AdminAdd from "./components/AdminAdd"
-import { Router } from 'react-router-dom';
+import Admin from "./components/Admin";
+import AdminAdd from "./components/AdminAdd";
+import AppCom0 from'./components/AppCom0';
 const history = createBrowserHistory();	
 
 class Navigation extends React.Component {
@@ -20,6 +19,7 @@ class Navigation extends React.Component {
 					<Route exact path="/" component={Home}/>
 					<Route exact path="/admin" component={Admin}/>
 					<Route path="/admin/add" component={AdminAdd}/>
+					<Route path="/admin/edit/0" component={AppCom0}/>
 				</div>
 			</BrowserRouter>
 		)

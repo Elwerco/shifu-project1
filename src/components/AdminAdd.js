@@ -1,27 +1,4 @@
-// import React from 'react';
-// import ReactDOM from "react-dom";
-
-// const AdminAdd = () => (
-// 	<div>
-// 		<form>
-// 			<h4>Название</h4>
-// 			<input className="Input form-control" type="text" />
-// 			<button className="but">Добавить</button>
-// 		</form>
-// 	</div>
-// )
-// const Btn = document.querySelectorAll('.but')[0];
-// 		Btn.addEventListener('click', () => (
-// 			Inp = document.querySelectorAll('.Input')[0].value;
-// 			localStorage.setItem(Inp, Inp);
-// 		);
-// ) 
-import { withRouter } from "react-router-dom";
-import createHistory from "history/createBrowserHistory"
-import React, { Component } from 'react';
-import {BrowserRouter, Route, Link} from 'react-router-dom';
-import createBrowserHistory from 'history/createBrowserHistory';
-import ReactDOM from "react-dom";
+import React from 'react';
 
 export default class Login extends React.Component {
 

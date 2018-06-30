@@ -25,6 +25,7 @@ li.inline a {
 	padding: 5px;
 	text-align-last: center;
 	background-color: #eee;
+	margin-bottom: 7px;
 }
 .in-cont{
 	display: flex;
@@ -41,4 +42,32 @@ li.inline a {
 }
 .btnlol{
 	margin-bottom: -50px;
+}
+.list-button{
+	display: grid;
+	grid-template-columns: auto auto;
+}
+.list-button a{
+	color: #fff;
+}
+.button-list{
+	display: grid;
+	margin-left: 10px;
+}
+.btn-primary{
+	margin-bottom: 5px;
+}
+.text-input{
+	width: 1000px;
+}
+.text-input-label{
+	width: 1200px;
+	display: flex;
+	flex-direction: column;
+}
+.btn-float{
+	margin-top: 5px;
+}
+.ac1-text{
+	margin-bottom: 13px;
 }
