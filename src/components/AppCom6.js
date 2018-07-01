@@ -1,28 +1,44 @@
 import React from "react";
 import {Component} from "react";
+import Admin from './Admin';
+import { Route, Redirect } from 'react-router';
+
 
 var defaultPerem = localStorage.getItem('myKey');
 
-class AppCom1 extends React.Component {
+class AppCom6 extends React.Component {
   constructor(props) {
     super(props);
     this.focus = this.focus.bind(this);
+    this.state = {isRedirect: false}
   }
 
   focus() {
     // Установка фокуса на поле текстового ввода (input) с явным использованием исходного API DOM
     console.log(this.textInput.value);
-    var perem = this.textInput.value;
-    localStorage.getItem('myKey');
-    localStorage.removeItem("myKey");
-    localStorage.setItem('myKey', perem);
-    window.location = "/admin";
-    const PeremInp0 = () => (localStorage.removeItem("myKey"););
-}
+    let perem = this.textInput.value;
+    // localStorage.getItem('myKey');
+    // localStorage.removeItem("myKey");
+    // localStorage.setItem('myKey', perem);
+    var numb0 = JSON.parse(localStorage.getItem('Егор'));
+    numb0[6] = perem;
+    var jsn0 = JSON.stringify(numb0);
+    localStorage.setItem('Егор', jsn0);
+    this.setState({isRedirect: true});
+  };
+
+  //   const renderRedirect = () => {
+  //   if (this.state.redirect) {
+  //     return <Redirect to='/admin'>
+  //   }
+  // }
+
   render() {
-    // Использование обратного вызова `ref` для сохранения ссылки на поле текстового ввода (input)
-    // как элемента DOM в this.textInput.
-   
+
+if (this.state.isRedirect) {
+  return <Redirect to='/admin'/>
+}
+
     return (
       <div>
         <input
@@ -40,5 +56,5 @@ class AppCom1 extends React.Component {
     );
   }
 }
-export default AppsCom0;
-export default PeremInp0;
+
+export default AppCom6;

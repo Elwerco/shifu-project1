@@ -6,7 +6,7 @@ import { Route, Redirect } from 'react-router';
 
 var defaultPerem = localStorage.getItem('myKey');
 
-class AppCom0 extends React.Component {
+class AppCom4 extends React.Component {
   constructor(props) {
     super(props);
     this.focus = this.focus.bind(this);
@@ -21,7 +21,7 @@ class AppCom0 extends React.Component {
     // localStorage.removeItem("myKey");
     // localStorage.setItem('myKey', perem);
     var numb0 = JSON.parse(localStorage.getItem('Егор'));
-    numb0[0] = perem;
+    numb0[4] = perem;
     var jsn0 = JSON.stringify(numb0);
     localStorage.setItem('Егор', jsn0);
     this.setState({isRedirect: true});
@@ -57,4 +57,4 @@ if (this.state.isRedirect) {
   }
 }
 
-export default AppCom0;
+export default AppCom4;

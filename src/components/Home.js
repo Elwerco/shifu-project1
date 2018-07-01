@@ -5,4 +5,6 @@ const Home = () => (
 		<h2 className="home">Main page</h2>
 	</div>
 ) 
+
 export default Home;
+

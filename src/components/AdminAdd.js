@@ -3,8 +3,8 @@ import React from 'react';
 export default class Login extends React.Component {
 
   handleSubmit(e) {
-    e.preventDefault()
-    const value = e.target.elements[0].value
+    e.preventDefault();
+    const value = e.target.elements[0].value;
     window.localStorage.setItem('myKey'+value, '{"title":"'+value+'","content": "", "slug": ""}');
     window.location = "/admin";
 }
