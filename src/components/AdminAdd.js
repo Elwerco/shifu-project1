@@ -7,6 +7,8 @@ export default class Login extends React.Component {
     const value = e.target.elements[0].value;
     window.localStorage.setItem('myKey'+value, '{"title":"'+value+'","content": "", "slug": ""}');
     window.location = "/admin";
+    // {"title":+value+,"content":"строго для взрослых","slug":"что такое слаг"}
+    // 'myKey'+value, '{"title":"'+value+'","content": "", "slug": ""}'
 }
   render() {
     return (
